@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ArrayProcessor {
 
     public static void print(int[] array){
-        for (int i:array) {
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
     }
@@ -22,7 +22,7 @@ public class ArrayProcessor {
 
     public static int sum(int[] array) {
         int sum = 0;
-        for (int i:array) {
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
         return sum;
@@ -30,7 +30,7 @@ public class ArrayProcessor {
 
     public static int even(int[] array) {
         int even = 0;
-        for (int i:array) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i]%2 == 0) even++;
         }
         return even;
@@ -46,14 +46,14 @@ public class ArrayProcessor {
             more = a;
             less = b;
         }
-        for (int i:array) {
+        for (int i = 0; i < array.length; i++) {
             if ((array[i] >= less) && (array[i] <= more)) belonging++;
         }
         return belonging;
     }
 
     public static boolean isPositive(int[] array) {
-        for (int i:array) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) return false;
         }
         return true;
