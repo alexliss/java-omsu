@@ -21,5 +21,17 @@ public class Main {
         else { System.out.println("doesn't equal"); }
         Vector3D vector1 = new Vector3D(point1, point2);
         Vector3D vector2 = new Vector3D(in.nextDouble(), in.nextDouble(), in.nextDouble());
+        //Vector3DProcessor
+        System.out.println("Scalar: " + Vector3DProcessor.scalarMultiply(vector1, vector2));
+        Vector3D vectorBuff = Vector3DProcessor.sum(vector1, vector2);
+        System.out.println("Sum: " + vectorBuff.toString());
+        vectorBuff = Vector3DProcessor.vectorMultiply(vector1, vector2);
+        System.out.println("Vector multiply: " + vectorBuff.toString());
+        vectorBuff = Vector3DProcessor.multiply(vector1, 3);
+        System.out.println("Multiply 3x: " + vectorBuff.toString());
+        vectorBuff = Vector3DProcessor.residual(vector1, vector2);
+        System.out.println("Residual: " + vectorBuff.toString());
+        //Vector3DArray
+
     }
 }
